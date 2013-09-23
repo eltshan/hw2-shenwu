@@ -16,6 +16,9 @@
   <delegateAnalysisEngine key="NGramAnnotatorDescriptor">
       <import name="descriptors.NGramAnnotatorDescriptor"/>
     </delegateAnalysisEngine>
+  <delegateAnalysisEngine key="EvaluatorDescriptor">
+      <import name="descriptors.EvaluatorDescriptor"/>
+    </delegateAnalysisEngine>
   </delegateAnalysisEngineSpecifiers>
   <analysisEngineMetaData>
     <name>testDescriptor</name>
@@ -30,6 +33,7 @@
         <node>TokenAnnotatorDescriptor</node>
       <node>NGramAnnotatorDescriptor</node>
       <node>AnswerScoreAnnotatorDescriptor</node>
+      <node>EvaluatorDescriptor</node>
       </fixedFlow>
     </flowConstraints>
     <typePriorities/>

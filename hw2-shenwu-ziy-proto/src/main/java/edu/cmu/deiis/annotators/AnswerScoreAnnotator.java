@@ -62,17 +62,19 @@ public class AnswerScoreAnnotator extends JCasAnnotator_ImplBase {
 
       while (true)// each ngram in current answer
       {
-        NGram asnwerNgram = (NGram) asnwerNgramIter.next();
-        if (asnwerNgram.getBegin() >= answer.getBegin() && asnwerNgram.getBegin() < answer.getEnd()) {
+        NGram answerNgram = (NGram) asnwerNgramIter.next();
+        if (answerNgram.getBegin() >= answer.getBegin() && answerNgram.getBegin() < answer.getEnd()) {
           total++;
+          //total += answerNgram.getElements().size();
           // FSIndex QuestionNgramIndex = aJCas.getAnnotationIndex(NGram.type);
           // Iterator QuestionNgramIter = QuestionNgramIndex.iterator();
-          String tmp = text.substring(asnwerNgram.getBegin(), asnwerNgram.getEnd());
+          String tmp = text.substring(answerNgram.getBegin(), answerNgram.getEnd());
           if (set.contains(tmp))
-            match++;
+            //match += answerNgram.getElements().size(); // consider weight
+            match++; //didn't consider weight
 
         }
-        if (asnwerNgram.getEnd() == answer.getEnd() - 2 && asnwerNgram.getElements().size() == 1)
+        if (answerNgram.getEnd() == answer.getEnd() - 2 && answerNgram.getElements().size() == 1)
           // when find the last NGram in the answer, break
           break;
       }// end of each ngram in answer
@@ -82,6 +84,7 @@ public class AnswerScoreAnnotator extends JCasAnnotator_ImplBase {
       currentAnswerScore.setEnd(answer.getEnd());
       currentAnswerScore.setAnswer(answer);
       currentAnswerScore.setScore(match / total);
+
       currentAnswerScore.setConfidence(1);
       currentAnswerScore.setCasProcessorId("edu.cmu.deiis.annotators.AnswerScoreAnnotator");
       currentAnswerScore.addToIndexes();
