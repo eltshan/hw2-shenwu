@@ -33,8 +33,8 @@ public class TokenAnnotator extends JCasAnnotator_ImplBase {
      * annotation.setEnd(temp.endPosition()); annotation.addToIndexes(); }
      */
 
-    FSIndex questionIndex = aJCas.getAnnotationIndex(Question.type);
-    Iterator questionIter = questionIndex.iterator();
+    FSIndex<?> questionIndex = aJCas.getAnnotationIndex(Question.type);
+    Iterator<?> questionIter = questionIndex.iterator();
     while (questionIter.hasNext()) {// extract tokens from question
       Question question = (Question) questionIter.next();
       Tokenizer<Word> tokenizer = factory.getTokenizer(new StringReader(text.substring(
@@ -49,11 +49,10 @@ public class TokenAnnotator extends JCasAnnotator_ImplBase {
         annotation.setConfidence(1);
         annotation.addToIndexes();
       }
-
     }
 
-    FSIndex answerIndex = aJCas.getAnnotationIndex(Answer.type);
-    Iterator answerIter = answerIndex.iterator();
+    FSIndex<?> answerIndex = aJCas.getAnnotationIndex(Answer.type);
+    Iterator<?> answerIter = answerIndex.iterator();
     while (answerIter.hasNext()) {// extract tokens from answers
       Answer answer = (Answer) answerIter.next();
       Tokenizer<Word> tokenizer = factory.getTokenizer(new StringReader(text.substring(

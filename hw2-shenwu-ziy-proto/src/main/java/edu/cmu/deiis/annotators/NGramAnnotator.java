@@ -35,12 +35,12 @@ public class NGramAnnotator extends JCasAnnotator_ImplBase {
      * annotation.setEnd(temp.endPosition()); annotation.addToIndexes(); }
      */
 
-    FSIndex tokenIndex = aJCas.getAnnotationIndex(Token.type);
-    Iterator tokenIter = tokenIndex.iterator();
+    FSIndex<?> tokenIndex = aJCas.getAnnotationIndex(Token.type);
+    Iterator<?> tokenIter = tokenIndex.iterator();
     // while (questionIter.hasNext()) {// extract tokens from question but with only question, no
     // need to hasNext
-    FSIndex questionIndex = aJCas.getAnnotationIndex(Question.type);
-    Iterator questionIter = questionIndex.iterator();
+    FSIndex<?> questionIndex = aJCas.getAnnotationIndex(Question.type);
+    Iterator<?> questionIter = questionIndex.iterator();
 
     Question question = (Question) questionIter.next();
 
@@ -109,8 +109,8 @@ public class NGramAnnotator extends JCasAnnotator_ImplBase {
         break;
     }
 
-    FSIndex answerIndex = aJCas.getAnnotationIndex(Answer.type);
-    Iterator answerIter = answerIndex.iterator();
+    FSIndex<?> answerIndex = aJCas.getAnnotationIndex(Answer.type);
+    Iterator<?> answerIter = answerIndex.iterator();
 
     while (answerIter.hasNext()) { // iterator of answer
       lastStart = -1;
