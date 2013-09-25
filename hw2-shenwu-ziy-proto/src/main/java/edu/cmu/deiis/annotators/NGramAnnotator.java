@@ -18,6 +18,8 @@ import edu.stanford.nlp.objectbank.TokenizerFactory;
 import edu.stanford.nlp.process.Tokenizer;
 import edu.stanford.nlp.process.PTBTokenizer.PTBTokenizerFactory;
 
+/** annotate N-gram feature by combining every one, every two, and every three tokens in each sentences.
+ * @generated */
 public class NGramAnnotator extends JCasAnnotator_ImplBase {
 
   @Override

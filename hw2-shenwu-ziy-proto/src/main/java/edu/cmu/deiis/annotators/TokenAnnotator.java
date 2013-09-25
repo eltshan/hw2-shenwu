@@ -16,6 +16,8 @@ import edu.stanford.nlp.objectbank.TokenizerFactory;
 import edu.stanford.nlp.process.PTBTokenizer.PTBTokenizerFactory;
 import edu.stanford.nlp.process.Tokenizer;
 
+/** annotate tokens using Stanford NLP lab. The periods at the end of each sentece is excluded
+ * @generated */
 public class TokenAnnotator extends JCasAnnotator_ImplBase {
 
   @Override

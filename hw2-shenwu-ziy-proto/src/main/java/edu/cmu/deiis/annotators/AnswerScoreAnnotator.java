@@ -20,6 +20,9 @@ import edu.stanford.nlp.objectbank.TokenizerFactory;
 import edu.stanford.nlp.process.Tokenizer;
 import edu.stanford.nlp.process.PTBTokenizer.PTBTokenizerFactory;
 
+/** annotation of answers, specifically with the given input, the answers are the sentences started with 'A'.
+ * @generated */
+
 public class AnswerScoreAnnotator extends JCasAnnotator_ImplBase {
 
   @Override

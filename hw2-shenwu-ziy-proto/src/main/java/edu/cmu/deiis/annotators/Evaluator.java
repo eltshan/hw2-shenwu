@@ -15,7 +15,8 @@ import edu.cmu.deiis.types.Answer;
 import edu.cmu.deiis.types.AnswerScore;
 import edu.cmu.deiis.types.Question;
 import edu.cmu.deiis.types.Token;
-
+/** Evaluate answer score and calculate the precision by assuming the answer with score more than 0.33 is right, and compare to golden answer
+ * @generated */
 public class Evaluator extends JCasAnnotator_ImplBase {
 
   @Override

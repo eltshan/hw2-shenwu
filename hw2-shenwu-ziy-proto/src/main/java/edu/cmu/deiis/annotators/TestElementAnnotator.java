@@ -9,6 +9,8 @@ import org.apache.uima.jcas.JCas;
 import edu.cmu.deiis.types.Answer;
 import edu.cmu.deiis.types.Question;
 
+/** annotate question or answers based on the start char of each sentence.
+ * @generated */
 public class TestElementAnnotator extends JCasAnnotator_ImplBase {
 
   @Override
