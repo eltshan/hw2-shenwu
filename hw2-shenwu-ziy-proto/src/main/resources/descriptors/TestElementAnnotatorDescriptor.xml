@@ -5,7 +5,7 @@
   <primitive>true</primitive>  <annotatorImplementationName>edu.cmu.deiis.annotators.TestElementAnnotator</annotatorImplementationName>
   <analysisEngineMetaData>
     <name>TestElementAnnotatorDescriptor</name>
-    <description/>
+    <description>annotate question or answers based on the start char of each sentence.</description>
     <version>1.0</version>
     <vendor/>
     <configurationParameters/>

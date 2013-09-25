@@ -5,7 +5,7 @@
   <primitive>true</primitive>  <annotatorImplementationName>edu.cmu.deiis.annotators.TokenAnnotator</annotatorImplementationName>
   <analysisEngineMetaData>
     <name>TokenAnnotatorDescriptor</name>
-    <description/>
+    <description>annotate tokens using Stanford NLP lab. The periods at the end of each sentece is excluded</description>
     <version>1.0</version>
     <vendor/>
     <configurationParameters/>

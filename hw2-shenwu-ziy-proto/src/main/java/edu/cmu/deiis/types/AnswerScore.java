@@ -10,8 +10,8 @@ import org.apache.uima.jcas.cas.TOP_Type;
 
 
 /** 
- * Updated by JCasGen Mon Sep 23 23:24:02 CST 2013
- * XML source: C:/Users/Eltshan/git/hw2-shenwu/hw2-shenwu-ziy-proto/src/main/resources/descriptors/hw2-shenwu-aae.xml
+ * Updated by JCasGen Tue Sep 24 02:49:17 CST 2013
+ * XML source: C:/Users/Eltshan/git/hw2-shenwu/hw2-shenwu-ziy-proto/src/main/resources/descriptors/testDescriptor.xml
  * @generated */
 public class AnswerScore extends Annotation {
   /** @generated

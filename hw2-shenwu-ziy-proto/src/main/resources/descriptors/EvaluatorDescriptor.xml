@@ -5,7 +5,7 @@
   <primitive>true</primitive>  <annotatorImplementationName>edu.cmu.deiis.annotators.Evaluator</annotatorImplementationName>
   <analysisEngineMetaData>
     <name>EvaluatorDescriptor</name>
-    <description/>
+    <description>Evaluate answer score and calculate the precision by assuming the answer with score more than 0.33 is right, and compare to golden answer</description>
     <version>1.0</version>
     <vendor/>
     <configurationParameters/>

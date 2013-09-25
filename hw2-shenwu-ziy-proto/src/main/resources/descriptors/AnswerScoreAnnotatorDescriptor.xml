@@ -5,7 +5,7 @@
   <primitive>true</primitive>  <annotatorImplementationName>edu.cmu.deiis.annotators.AnswerScoreAnnotator</annotatorImplementationName>
   <analysisEngineMetaData>
     <name>AnswerScoreAnnotatorDescriptor</name>
-    <description/>
+    <description>Annotator for annotate answers score to each answer by calculating the Ngram overlap score.</description>
     <version>1.0</version>
     <vendor/>
     <configurationParameters/>
